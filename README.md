@@ -8,7 +8,9 @@ For python:
 
 Download the folder.
 
-Create a virtual environment and activate it. Run command `pip install -r requirements.txt`
+Create a virtual environment and activate it. 
+
+Run command `pip install -r ./PayU/requirements.txt`
 
 Create a .env file inside the folder containing create_payment_links.py file.
 

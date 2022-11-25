@@ -9,5 +9,3 @@ class PaymentConstants():
     FIRSTNAME = "awaazde"
     EMAIL = "anurag@awaaz.de"
     CREATE_INVOICE = "create_invoice"
-    KEY = "CrdhzE"
-    SALT = "ECkhcFmxrvscBVrQUjEJ9OAFcnW2QrcR"

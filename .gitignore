@@ -1,0 +1,8 @@
+**.pyc
+**.class
+.idea/
+.project
+.pydevproject
+bin/
+
+.env
