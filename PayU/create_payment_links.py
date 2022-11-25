@@ -1,7 +1,9 @@
+import os
 import argparse
+from dotenv import load_dotenv
+
 from PayU.validators import DataValidator
 from PayU.utils import CSVUtils, PayUUtils, CommonUtils
-from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -28,14 +30,22 @@ if __name__ == "__main__":
     destination_file_name = args.__dict__['destination_file_name']
 
     print("Reading data from {}...". format(source_path))
+
+    #Check if file path exists
+    if os.path.exists(source_path):
+        file_path = source_path
+    else:
+        print("File path don't exists")
+
     headers, data = CSVUtils.read_csv(source_path)
+
+    # Validate the data
     validator = DataValidator()
     validator.validate(data)
 
     CSVUtils.write_header_to_csv(data, destination_path, destination_file_name)
-
-
     print("Data validated...")
+
 
     print("Creating Urls...")
     for records in CommonUtils.process_iterable_in_chunks(data):
