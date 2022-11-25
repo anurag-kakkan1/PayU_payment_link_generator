@@ -25,7 +25,7 @@ These values are used to authenticate the payment and to generate the hash value
 
 ## Usage
 
-Download the folder and open PayU folder in terminal.
+Download the folder and open PayU folder which contains the create_payment_links.py file in terminal.
 
 Activate the virtual environment.
 
